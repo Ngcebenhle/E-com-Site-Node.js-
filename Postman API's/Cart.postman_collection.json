@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "557d115b-ef95-4db0-9c05-91b5caf91af6",
+		"name": "Cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34956803"
+	},
+	"item": [
+		{
+			"name": "Get User Cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/cart/user/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cart",
+						"user",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add to Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "products",
+							"value": "[{\"_id\": \"667db23d709dd29a938cb2a7\",\"store_id\": \"667d18d5e8beb84d2ed20098\",\"category_id\": \"667cf4b777fab80efed04f3c\",\"sub_category_id\": \"667cfa12ae75c6878f7f4100\",\"name\": \"Men's Polo T-Shirts ( Plain)\",\"description\": \"Round-necked Shirts Plain\",\"specification\": \"in blue and black, green\",\"images\": [\"src\\\\uploads\\\\item_cover20240519_145144.jpg\",\"src\\\\uploads\\\\item_covernetwork.png\"],\"sku\": \"cc5896c\",\"price\": 50,\"quantity\": 2,\"status\": true}]",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "active",
+							"type": "text"
+						},
+						{
+							"key": "total",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "instruction",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/cart/add/order?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cart",
+						"add",
+						"order"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete from Cart",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjdjNzY5YzI3NjdmZTIxN2ZmMmU1ZWUiLCJwaG9uZSI6IjY2NTg3NDU5NTIiLCJ0eXBlIjoidXNlciIsImlhdCI6MTcxOTQzMzE1OCwiZXhwIjoxNzM0OTg1MTU4LCJhdWQiOiI2NjdjNzY5YzI3NjdmZTIxN2ZmMmU1ZWUiLCJpc3MiOiJtZUBtZSJ9.2AWNA1eLKZ8ZXluXVVD6yci_FrGeWVyP7u1ZxkE-tc0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

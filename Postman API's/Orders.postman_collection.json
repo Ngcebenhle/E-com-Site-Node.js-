@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "6349d371-b4f5-4581-823a-e579e463354c",
+		"name": "Orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34956803"
+	},
+	"item": [
+		{
+			"name": "Add Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "products",
+							"value": "[ {\"_id\": \"667db23d709dd29a938cb2a7\",\"store_id\": \"667d18d5e8beb84d2ed20098\",\"category_id\": \"667cf4b777fab80efed04f3c\",\"sub_category_id\": \"667cfa12ae75c6878f7f4100\",\"name\": \"Men's Polo T-Shirts ( Plain)\",\"description\": \"Round-necked Shirts Plain\",\"specification\": \"in blue and black, green\",\"images\": [ \"src\\\\uploads\\\\item_cover20240519_145144.jpg\",\"src\\\\uploads\\\\item_covernetwork.png\"], \"sku\": \"cc5896c\",\"price\": 50,\"quantity\": 2,\"status\": true}]",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "{\"_id\":\"6679383397f935e529f0744f\",\"title\":\"Home\",\"address\":\"Eleven Madison Park, NY, USA\",\"landmark\":\"Fire Hydrant\",\"lat\"40.741673,\"lng\"-73.987244}",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "created",
+							"type": "text"
+						},
+						{
+							"key": "payment_status",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "payment_mode",
+							"value": "COD",
+							"type": "text"
+						},
+						{
+							"key": "grand_Total",
+							"value": "120",
+							"type": "text"
+						},
+						{
+							"key": "delivery_charge",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "total",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "instruction",
+							"value": "none",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/order/addOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"order",
+						"addOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/order/user/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"order",
+						"user",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjdjNzY5YzI3NjdmZTIxN2ZmMmU1ZWUiLCJwaG9uZSI6IjY2NTg3NDU5NTIiLCJ0eXBlIjoidXNlciIsImlhdCI6MTcxOTQzMzE1OCwiZXhwIjoxNzM0OTg1MTU4LCJhdWQiOiI2NjdjNzY5YzI3NjdmZTIxN2ZmMmU1ZWUiLCJpc3MiOiJtZUBtZSJ9.2AWNA1eLKZ8ZXluXVVD6yci_FrGeWVyP7u1ZxkE-tc0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

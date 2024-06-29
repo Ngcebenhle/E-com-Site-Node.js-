@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "eaae7bbb-3f1b-4ddb-b31a-c3ff584c62d7",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34956803"
+	},
+	"item": [
+		{
+			"name": "E-Com",
+			"item": [
+				{
+					"name": "E-com Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjdjNzY5YzI3NjdmZTIxN2ZmMmU1ZWUiLCJwaG9uZSI6IjY2NTg3NDU5NTIiLCJ0eXBlIjoidXNlciIsImlhdCI6MTcxOTQzMzE1OCwiZXhwIjoxNzM0OTg1MTU4LCJhdWQiOiI2NjdjNzY5YzI3NjdmZTIxN2ZmMmU1ZWUiLCJpc3MiOiJtZUBtZSJ9.2AWNA1eLKZ8ZXluXVVD6yci_FrGeWVyP7u1ZxkE-tc0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "meto",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "meto@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user//update/customer/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"",
+								"update",
+								"customer",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OTP logIn",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/otpLogIn?phone=6658745952&otp=625566",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"otpLogIn"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "6658745952"
+								},
+								{
+									"key": "otp",
+									"value": "625566"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register using Phone",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user//registerUserViaPhone?phone=6658745952",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"",
+								"registerUserViaPhone"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "6658745952"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

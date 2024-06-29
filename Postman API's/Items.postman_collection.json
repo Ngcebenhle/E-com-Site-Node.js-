@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "83b60d33-d95a-4f9b-83a7-ebf783ea4fe6",
+		"name": "Items",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34956803"
+	},
+	"item": [
+		{
+			"name": "Get inventory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/item/products?category_id=667cf4b777fab80efed04f3c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"item",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category_id",
+							"value": "667cf4b777fab80efed04f3c"
+						},
+						{
+							"key": "sub_category_id",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "store_id",
+							"value": "667d18d5e8beb84d2ed20098",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "667cf4b777fab80efed04f3c",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Men's Polo T-Shirts ( Graffiti)",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "veg",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "Polo (Golf T-Shirts)",
+							"type": "text"
+						},
+						{
+							"key": "specification",
+							"value": "In all Colors ",
+							"type": "text"
+						},
+						{
+							"key": "sub_category_id",
+							"value": "667cfa12ae75c6878f7f4100",
+							"type": "text"
+						},
+						{
+							"key": "sku",
+							"value": "ccDDtr5815875c",
+							"type": "text"
+						},
+						{
+							"key": "stock_unit",
+							"value": "506",
+							"type": "text"
+						},
+						{
+							"key": "item_cover",
+							"type": "file",
+							"src": [
+								"postman-cloud:///1ef2c7b1-c767-46e0-97bd-e58da8b8db9f",
+								"postman-cloud:///1ef2bfa0-383e-4a90-a8cd-9287bb7c5ecd"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/item/create/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"item",
+						"create",
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjdjNzY5YzI3NjdmZTIxN2ZmMmU1ZWUiLCJwaG9uZSI6IjY2NTg3NDU5NTIiLCJ0eXBlIjoidXNlciIsImlhdCI6MTcxOTQzMzE1OCwiZXhwIjoxNzM0OTg1MTU4LCJhdWQiOiI2NjdjNzY5YzI3NjdmZTIxN2ZmMmU1ZWUiLCJpc3MiOiJtZUBtZSJ9.2AWNA1eLKZ8ZXluXVVD6yci_FrGeWVyP7u1ZxkE-tc0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
