@@ -32,9 +32,8 @@ class cartRouter {
     
     this.router.post(
         "/add/order",
-       
         globalMiddleWare.auth,
-        // globalMiddleWare.adminrole,
+        globalMiddleWare.adminrole,
         new utils().multer.single('banner'),
         cartValidator.addToCart(),
         globalMiddleWare.checkError,

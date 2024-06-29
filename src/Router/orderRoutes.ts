@@ -32,7 +32,7 @@ class orderRouter {
     this.router.post(
         "/addOrder",
         globalMiddleWare.auth,
-        // globalMiddleWare.adminrole,
+        globalMiddleWare.adminrole,
         // new utils().multer.single('banner'),
          orderValidator.addOrder(),
         globalMiddleWare.checkError,

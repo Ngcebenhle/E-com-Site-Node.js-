@@ -37,7 +37,7 @@ class storeRouter {
       this.router.get(
         "/searchStore/:name",
         globalMiddleWare.auth,
-        // globalMiddleWare.adminrole,
+        globalMiddleWare.adminrole,
         globalMiddleWare.checkError,
         storeValidator.searchStore(),
         storeController.searchByIDStore
@@ -46,7 +46,7 @@ class storeRouter {
       this.router.get(
         "/searchStore",
         globalMiddleWare.auth,
-        // globalMiddleWare.adminrole,
+        globalMiddleWare.adminrole,
         globalMiddleWare.checkError,
         storeValidator.searchStore(),
         storeController.searchStore
@@ -64,7 +64,7 @@ class storeRouter {
     this.router.post(
         "/create/store",
         globalMiddleWare.auth,
-        // globalMiddleWare.adminrole,
+        globalMiddleWare.adminrole,
         new utils().multer.single('storeImages'),
         storeValidator.addStore(),
        globalMiddleWare.checkError,
