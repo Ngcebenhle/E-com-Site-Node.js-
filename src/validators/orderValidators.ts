@@ -65,9 +65,10 @@ export class orderValidator {
            req.product_ids = product_ids
           let list = {$in: [...product_ids]}  
            return item.findById({
-              _id:product_ids
+              // _id:product_ids
             // _id:$in: [...products_ids]
             // _id:{$all: [...product_ids]}    
+            _id:{$in: [...product_ids]}   
            })
             .then((server_products:any) => {
               // console.log(server_products)

@@ -34,7 +34,7 @@ export class server {
   setConfigs() {
     this.dotenvConfig();
     this.connectMongoDB();
-    this.connectRedis();
+    // this.connectRedis();
     this.allowCors();
     this.configBodyParser();
   }
